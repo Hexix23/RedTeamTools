@@ -14,7 +14,21 @@ read_json() {
     #read the JSON file from the URL
     json=$(curl -s $1)
     #print the JSON file and grep the domain name with grep and sed
-    echo $json | cut -d ":" -f 2 | tr -d "["\" | tr -d "]}"
+    echo $json | tr -d "{"\" | tr -s ":[" "+" | tr -s "]," "+" | tr -s "+" "\n" > file.txt
+    add_ip
+}
+
+#add the string "IP:" to the beginning of each line with a digit
+add_ip() {
+    #read the file
+    while read line; do
+        #if the line has a digit, add the string "IP:" to the beginning of the line
+        if [[ $line =~ ^[0-9] ]]; then #if the line has a digit at the beginning of the line
+            echo "IP: $line"
+        else
+            echo $line
+        fi
+    done < file.txt
 }
 
 VALID_ARGUMENTS=${#}
@@ -44,3 +58,4 @@ while getopts :u:j:h opt; do
         ;;
     esac
 done
+#end of script
