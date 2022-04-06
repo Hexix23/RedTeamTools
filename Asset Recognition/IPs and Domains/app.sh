@@ -6,6 +6,7 @@ usage() {
     echo "-h --> help message <--"
     echo "-j --> json output <--"
     echo "-u --> url <--"
+    echo "-d --> domain <--"
     echo "---------------> Example: $0 -u http://www.example.com"
 }
 #write a function to read a JSON file from a URL and print the results
