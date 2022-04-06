@@ -8,25 +8,34 @@ usage() {
     echo "-u --> url <--"
     echo "---------------> Example: $0 -u http://www.example.com"
 }
-
 #write a function to read a JSON file from a URL and print the results
 read_json() {
     #read the JSON file from the URL
     json=$(curl -s $1)
     #print the JSON file and grep the domain name with grep and sed
-    echo $json | tr -d "{"\" | tr -s ":[" "+" | tr -s "]," "+" | tr -s "+" "\n" > file.txt
+    echo $json | tr -d "{"\" | tr -s ":[" "+" | tr -s "]," "+" | tr -s "+" "\n"  > file.txt
     add_ip
 }
 
 #add the string "IP:" to the beginning of each line with a digit
 add_ip() {
+    #valid IP address regex
+    VALID_IP_ADDRESS="^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$"
     #read the file
     while read line; do
-        #if the line has a digit, add the string "IP:" to the beginning of the line
-        if [[ $line =~ ^[0-9] ]]; then #if the line has a digit at the beginning of the line
+        #if the line has a $VALID_IP_ADDRESS, add the string "IP:" to the beginning of the line
+        #make a counter to count the number of lines
+        if [[ $line =~ $VALID_IP_ADDRESS ]]; then #if the line has a digit at the beginning of the line
             echo "IP: $line"
+            #reset the counter
+            count=0
         else
-            echo $line
+            #if last char is } then finish the loop
+            if [[ $line == "}" ]]; then
+                break
+            fi
+            echo "--> $count $line"
+            count=$(($count+1))
         fi
     done < file.txt
 }
