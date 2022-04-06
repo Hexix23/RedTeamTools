@@ -24,7 +24,6 @@ add_ip() {
     #read the file
     while read line; do
         #if the line has a $VALID_IP_ADDRESS, add the string "IP:" to the beginning of the line
-        #make a counter to count the number of lines
         if [[ $line =~ $VALID_IP_ADDRESS ]]; then #if the line has a digit at the beginning of the line
             echo "IP: $line"
             #reset the counter
