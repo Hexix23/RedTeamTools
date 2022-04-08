@@ -6,7 +6,7 @@ usage() {
     echo "-h --> help message <--"
     echo "-j --> json output <--"
     echo "-u --> url <--"
-    echo "-d --> domain <--"
+    echo "-d --> TLDs <--"
     echo "---------------> Example: $0 -u http://www.example.com"
 }
 #write a function to read a JSON file from a URL and print the results
@@ -15,7 +15,7 @@ read_json() {
     json=$(curl -s $1)
     #print the JSON file and grep the domain name with grep and sed
     echo $json | tr -d "{"\" | tr -s ":[" "+" | tr -s "]," "+" | tr -s "+" "\n"  > file.txt
-    add_ip
+    add_ip > pre-domains.txt
 }
 
 #add the string "IP:" to the beginning of each line with a digit
@@ -40,6 +40,11 @@ add_ip() {
     done < file.txt
 }
 
+grep_domains(){
+    
+}
+
+
 VALID_ARGUMENTS=${#}
 
 if [[ "$VALID_ARGUMENTS" -eq 0 ]]; then
@@ -47,7 +52,7 @@ if [[ "$VALID_ARGUMENTS" -eq 0 ]]; then
    exit 1
 fi
 
-while getopts :u:j:h opt; do
+while getopts :u:j:d:h opt; do
     case ${opt} in
         h) #help
             usage
@@ -60,7 +65,11 @@ while getopts :u:j:h opt; do
         j) #json
             JSON=${OPTARG}
             read_json $JSON
-        ;;        
+        ;;
+        d) #TLDs
+            JSON=${OPTARG}
+            read_json $JSON
+        ;;                   
         *) # end of arguments , allways when an argument is not recognized
             printf "Invalid Option: $1.\n"
             usage        

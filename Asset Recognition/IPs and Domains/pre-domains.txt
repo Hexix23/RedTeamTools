@@ -1,0 +1,139 @@
+IP: 89.107.176.100
+--> 0 tarjetapagomundoconsum.com
+IP: 89.107.176.118
+--> 0 ajuda.catalunyacaixa.com
+--> 1 ayuda.catalunyacaixa.com
+--> 2 bbvabconomy.es
+--> 3 bbvamovil.es
+--> 4 bbvavalora.com
+--> 5 bbvavalora.es
+--> 6 blog.catalunyacaixa.com
+--> 7 cx.bbva.es
+--> 8 jovesiciencia.catalunyacaixa.com
+--> 9 oficines.catalunyacaixa.com
+--> 10 plantamosunbosqueparati.catalunyacaixa.com
+--> 11 plantemunboscperatu.catalunyacaixa.com
+--> 12 www.bbvavalora.com
+--> 13 www.bbvavalora.es
+--> 14 www.catalunyacaixa.com
+--> 15 www.uno-e.com
+IP: 89.107.176.123
+--> 0 qa-edni.grupobbva.com
+IP: 89.107.176.125
+--> 0 dnsbbva2.bbvamovil.com
+IP: 89.107.176.126
+--> 0 bbva.hk
+--> 1 v4bb0r.bbva.com
+IP: 89.107.176.127
+--> 0 edni.grupobbva.com
+IP: 89.107.176.128
+--> 0 baas.grupobbva.com
+IP: 89.107.176.133
+--> 0 www.affinitycard.pt
+IP: 89.107.176.138
+--> 0 bbvanetadvance.com
+IP: 89.107.176.142
+--> 0 host2host.grupobbva.com
+IP: 89.107.176.143
+--> 0 recuperaciones.bbva.es
+IP: 89.107.176.144
+--> 0 cibbaas.grupobbva.com
+IP: 89.107.176.145
+--> 0 chat.bbva.es
+IP: 89.107.176.146
+--> 0 passpt.grupobbva.com
+IP: 89.107.176.19
+--> 0 equipamiento.bbvaconsumerfinance.es
+--> 1 instalacion.bbvaconsumerfinance.es
+--> 2 operacional.bbvaconsumerfinance.es
+--> 3 tarjetas.bbvaconsumerfinance.es
+--> 4 www.finanzianet.com
+IP: 89.107.176.26
+--> 0 zzorg02xx-svc.bbva.es
+IP: 89.107.176.27
+--> 0 bancamovil.grupobbva.com
+--> 1 xxorg02zz-svc.bbva.es
+IP: 89.107.176.28
+--> 0 colaboradoresexternos.bbva.es
+IP: 89.107.176.31
+--> 0 at.grupobbva.com
+--> 1 qa.bbva.es
+IP: 89.107.176.32
+--> 0 colabexternos.bbva.pt
+IP: 89.107.176.33
+--> 0 appt.bbva.pt
+IP: 89.107.176.34
+--> 0 qa.bbvanetcash.com
+IP: 89.107.176.35
+--> 0 www.bbvanet.be
+--> 1 www.bbvanet.co.uk
+--> 2 www.bbvanet.fr
+--> 3 www.bbvanet.it
+IP: 89.107.176.44
+--> 0 www.bbvanet.cw
+IP: 89.107.176.47
+--> 0 emp.grupobbva.com
+IP: 89.107.176.48
+--> 0 www2.bbvacib.com
+IP: 89.107.176.50
+--> 0 office.bbva.es
+IP: 89.107.176.53
+--> 0 videoasesores.bbva.es
+IP: 89.107.176.56
+--> 0 rcserpro.grupobbva.com
+IP: 89.107.176.58
+--> 0 appserpre.grupobbva.com
+IP: 89.107.176.59
+--> 0 rcserpre.grupobbva.com
+IP: 89.107.176.6
+--> 0 www.cotiza.muface.map.es
+IP: 89.107.176.62
+--> 0 89-107-176-62.ip.btc-net.bg
+IP: 89.107.176.66
+--> 0 dnsbbva1.bbvamovil.com
+--> 1 dns.bbvamovil.com
+IP: 89.107.176.70
+--> 0 gsainternet.grupobbva.com
+IP: 89.107.176.74
+--> 0 zzorg01xx.bbva.es
+IP: 89.107.176.75
+--> 0 delphos.bbvaresearch.com
+--> 1 host.bbva.com
+--> 2 tpvadmin.bbva.es
+--> 3 tpvb2b.bbva.es
+--> 4 tpvsoft.bbva.es
+--> 5 tpvvirtual.bbva.es
+--> 6 w3.grupobbva.com
+--> 7 www.bbva.gr
+--> 8 www.bbvaqualityfunds.com
+--> 9 www.delphos.bbvaresearch.com
+--> 10 www.grupobbva.com
+--> 11 www.grupobbva.es
+--> 12 www.portalbbva.com
+IP: 89.107.176.76
+--> 0 www.bbva-net.com
+--> 1 www.bbvanet.com
+IP: 89.107.176.79
+--> 0 qa-bancamovil.uno-e.com
+IP: 89.107.176.83
+--> 0 xxorg01zz.bbva.es
+IP: 89.107.176.84
+--> 0 bancamovil.uno-e.com
+IP: 89.107.176.94
+--> 0 bbvaoneview.com
+--> 1 bbvaoneview.es
+--> 2 dns2.bbvanetcash.it
+--> 3 hostmaster.bbvanetcash.hk
+--> 4 hostmaster.bbvanetcash.it
+--> 5 www.bbva-finet.com
+--> 6 www.bbvanetcash.be
+--> 7 www.bbvanetcash.co.uk
+--> 8 www.bbvanetcash.fr
+--> 9 www.bbvanetcash.pt
+--> 10 www.bpo.bbvanetcash.com
+IP: 89.107.176.96
+--> 0 www.affinitycard.es
+IP: 89.107.176.97
+--> 0 piloto.bbva.pt
+IP: 89.107.176.99
+--> 0 www.patrimonios.bbva.pt
