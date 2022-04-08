@@ -41,7 +41,9 @@ add_ip() {
 }
 
 grep_domains(){
-    
+    while IFS= read -r line; do #IFS set the null String that prevents leading or trailling whitespace from being trimmed
+        if [[ $line +]]
+    done < pre-domains.txt
 }
 
 
