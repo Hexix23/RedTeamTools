@@ -9,7 +9,7 @@ usage() {
     echo "-d --> TLDs <--"
     echo "---------------> Example: $0 -u http://www.example.com"
 }
-#write a function to read a JSON file from a URL and print the results
+#read a JSON file from a URL and print the results
 read_json() {
     #read the JSON file from the URL
     json=$(curl -s $1)
@@ -41,11 +41,25 @@ add_ip() {
 }
 
 grep_domains(){
+    #valid DOMAIN regex
+    VALID_DOMAIN="^[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9]\.[a-zA-Z]{2,}$"
+    
     while IFS= read -r line; do #IFS set the null String that prevents leading or trailling whitespace from being trimmed
-        if [[ $line +]]
+        if [[ $line =~  IP ]]; then
+            continue
+        else
+            domain=$(echo $line | cut -d ' ' -f3)
+            if [[ $domain =~ $VALID_DOMAIN ]]; then
+                domain_clear=$(echo $domain | cut -d '.' -f1)
+                echo "DOMAIN: $domain_clear"
+            else
+                tld=$(echo $domain | cut -d '.' -f2)
+                echo "TLDs: $tld"
+                continue
+            fi
+        fi
     done < pre-domains.txt
 }
-
 
 VALID_ARGUMENTS=${#}
 
@@ -71,6 +85,7 @@ while getopts :u:j:d:h opt; do
         d) #TLDs
             JSON=${OPTARG}
             read_json $JSON
+            grep_domains
         ;;                   
         *) # end of arguments , allways when an argument is not recognized
             printf "Invalid Option: $1.\n"
