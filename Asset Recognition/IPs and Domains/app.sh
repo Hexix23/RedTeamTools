@@ -93,7 +93,16 @@ grep_domains(){
         
         echo "------------------------------------------------------"
         echo "AMASS SECTION"
+        amass enum -d 
 
+    done < final.txt
+    
+    echo "------------------------------------------------------"
+    echo "AMASS SECTION"
+    echo "------------------------------------------------------"
+
+    while IFS= read -r line; do
+        amass enum -d $line -src
     done < final.txt
 
     #remove all the files created
