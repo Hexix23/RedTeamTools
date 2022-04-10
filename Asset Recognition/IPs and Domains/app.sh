@@ -12,7 +12,9 @@ usage() {
     echo "-A --> ALL { GO FOR A COFFEE }: "
     echo "       ------> SONAR"
     echo "       ------> ASSETFINDER"
-    echo "       ------> SUBSCAN { BRUTE FORCE } ---- { /-\ YOU WILL NEED TO SPECIFY YOUR OWN ROUTES DIRECTORY /-\ }" 
+    echo "                                             /-\ /-\ /-\ /-\ /-\ /-\ /-\ /-\ /-\ /-\ /-\ /-\ /-\ /-\ "
+    echo "       ------> SUBSCAN { BRUTE FORCE } ---- /-\ YOU WILL NEED TO SPECIFY YOUR OWN ROUTES DIRECTORY /-\ "
+    echo "                                             /-\ /-\ /-\ /-\ /-\ /-\ /-\ /-\ /-\ /-\ /-\ /-\ /-\ /-\ "
     echo "---------------> Example: $0 -u http://www.example.com"
 }
 
