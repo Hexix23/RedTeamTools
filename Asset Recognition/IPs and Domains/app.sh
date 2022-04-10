@@ -121,17 +121,29 @@ allScan(){
     cat assetfinder-final.txt >> brute.txt
     cat subdomains-final.txt >> brute.txt
     cat brute.txt | sort | uniq > brute-final.txt
+    
+    while IFS= read -r line; do
+        if [[ $line =~ $VALID_DOMAIN ]]; then
+            echo "$line" >> clear-brutedomain.txt
+        else
+            #tld=$(echo $line | cut -d '.' -f1)
+            echo "$tld" >> clear-brutedomain.txt
+            continue
+        fi
+    done < brute-final.txt
+    cat clear-brutedomain.txt | sort | uniq > clear-brutedomain-final.txt
     ###################
 
     #NEW BRUTE FORCE MODULE
     while IFS= read -r line; do
         echo "Subdomain Brute Force: $line"
-        cd /home/kali/Documents/subscan && python3 subscan.py -f sub.txt $line > /home/kali/Documents/RedTeamTools/Asset\ Recognition/IPs\ and\ Domains/brutedomain.txt
-        cat brutedomain.txt | sort | uniq > $line-SubDomains.txt
-    done < assetfinder-final.txt
+        cd /home/kali/Documents/subscan && python3 subscan.py -f sub.txt $line >> /home/kali/Documents/RedTeamTools/Asset\ Recognition/IPs\ and\ Domains/brutedomain.txt
+        cd /home/kali/Documents/RedTeamTools/Asset\ Recognition/IPs\ and\ Domains/
+        cat brutedomain.txt | sort | uniq > FINAL.txt
+    done < clear-brutedomain-final.txt
     
     #remove all the files created
-    rm tlds.txt && rm file.txt && rm pre-domains.txt && rm subdomains.txt && rm assetfinder.txt && brute.txt
+    rm tlds.txt && rm file.txt && rm pre-domains.txt && rm subdomains.txt && rm assetfinder.txt && brute.txt && clear-brutedomain.txt && clear-brutedomain-final.txt
 }
 
 VALID_ARGUMENTS=${#}
