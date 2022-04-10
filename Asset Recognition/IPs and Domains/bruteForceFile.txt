@@ -1,67 +1,0 @@
-api.mercadona.com 195.53.40.211
-autodiscover.mercadona.com 195.53.40.208
-autodiscover.mercadona.es 195.53.40.208
-autodiscover.mercadona.life 213.186.33.5
-autodiscover.premercadona.com 195.53.41.200
-autodiscover.premercadona.es 194.224.51.166
-dev.mercadona.info 195.149.113.31
-ftp.mercadona.club 34.102.136.180
-ftp.mercadona.com 212.101.64.37
-ftp.mercadona.life 213.186.33.5
-ftp.mercadona.site 31.214.178.122
-imap.mercadona.site 31.214.176.5
-mail.mercadona.site 31.214.176.5
-pop.mercadona.site 31.214.176.5
-test2.tarjetamercadona.es 10.1.1.2
-www.mercadona.at 194.36.123.74
-www.mercadona.club 34.102.136.180
-www.mercadona.com 195.53.40.242
-www.mercadona.dk 194.36.123.74
-www.mercadona.es 35.201.121.112
-www.mercadona.eus 212.123.41.105
-www.mercadona.gal 212.123.41.105
-www.mercadona.jobs 194.36.123.74
-www.mercadona.life 213.186.33.5
-www.mercadona.pl 194.36.123.74
-www.mercadona.pt 195.53.40.241
-www.mercadona.ro 194.36.123.74
-www.mercadona.ru 194.36.123.74
-www.mercadona.se 194.36.123.74
-www.mercadona.sk 194.36.123.74
-www.mercadonatech.com 172.217.17.19
-www.mercadonatech.es 172.217.168.179
-www.mercadona.tel 52.50.143.27
-www.tarjetamercadona.es 10.1.1.15
-api.mercadona.com 195.53.40.211
-autodiscover.mercadona.com 195.53.40.208
-autodiscover.mercadona.es 195.53.40.208
-autodiscover.mercadona.life 213.186.33.5
-autodiscover.premercadona.com 195.53.41.200
-autodiscover.premercadona.es 194.224.51.166
-dev.mercadona.info 195.149.113.31
-ftp.mercadona.club 34.102.136.180
-ftp.mercadona.com 212.101.64.37
-ftp.mercadona.life 213.186.33.5
-ftp.mercadona.site 31.214.178.122
-imap.mercadona.site 31.214.176.5
-mail.mercadona.site 31.214.176.5
-pop.mercadona.site 31.214.176.5
-www.mercadona.at 194.36.123.74
-www.mercadona.club 34.102.136.180
-www.mercadona.com 195.53.40.242
-www.mercadona.dk 194.36.123.74
-www.mercadona.es 35.201.121.112
-www.mercadona.eus 212.123.41.105
-www.mercadona.gal 212.123.41.105
-www.mercadona.jobs 194.36.123.74
-www.mercadona.life 213.186.33.5
-www.mercadona.pl 194.36.123.74
-www.mercadona.pt 195.53.40.241
-www.mercadona.ro 194.36.123.74
-www.mercadona.ru 194.36.123.74
-www.mercadona.se 194.36.123.74
-www.mercadona.sk 194.36.123.74
-www.mercadonatech.com 142.250.200.83
-www.mercadonatech.es 142.250.185.19
-www.mercadona.tel 52.50.143.27
-www.tarjetamercadona.es 10.1.1.15
