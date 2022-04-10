@@ -117,6 +117,7 @@ allScan(){
     done < tlds-final.txt
 
     #################################################
+    #################################################
     cat assetfinder-final.txt >> brute.txt
     cat subdomains-final.txt >> brute.txt
     cat brute.txt | sort | uniq > brute-final.txt
@@ -125,29 +126,34 @@ allScan(){
         if [[ $line =~ $VALID_DOMAIN ]]; then
             echo "$line" >> clear-brutedomain.txt
         else
-            #tld=$(echo $line | cut -d '.' -f1)
             echo "$tld" >> clear-brutedomain.txt
             continue
         fi
     done < brute-final.txt
     cat clear-brutedomain.txt | sort | uniq > clear-brutedomain-final.txt
     #################################################
+    #################################################
 
-    ##### NEED TO SWITCHS THIS FIELDS #####
-    SUBSCAN_DIRECTORY = /home/kali/Documents/subscan
-    DIRECTORY_FILE = /home/kali/Documents/RedTeamTools/Asset\ Recognition/IPs\ and\ Domains
-    ##### NEED TO SWITCHS THIS FIELDS #####
+    
+    ##### NEED TO SWITCHS THIS FIELDS TO UR OWN ROUTE #####
+    SUBSCAN_DIRECTORY=/home/kali/Documents/subscan/
+    FILE_DIRECTORY=/home/kali/Documents/RedTeamTools/Asset\ Recognition/IPs\ and\ Domains
+    ##### NEED TO SWITCHS THIS FIELDS TO UR OWN ROUTE #####
+
 
     #NEW BRUTE FORCE MODULE
     while IFS= read -r line; do
         echo "Subdomain Brute Force: $line"
-        cd $SUBSCAN_DIRECTORY && python3 subscan.py -f sub.txt $line >> $DIRECTORY_FILE/brutedomain.txt
-        cd $DIRECTORY_FILE
+        cd "$SUBSCAN_DIRECTORY"
+        python3 subscan.py -f sub.txt $line >> "$FILE_DIRECTORY"/brutedomain.txt
+        cd "$FILE_DIRECTORY"
         cat brutedomain.txt | sort | uniq > FINAL.txt
     done < clear-brutedomain-final.txt
     
     #remove all the files created
-    rm tlds.txt && rm file.txt && rm pre-domains.txt && rm subdomains.txt && rm assetfinder.txt && brute.txt && clear-brutedomain.txt && clear-brutedomain-final.txt
+    rm tlds.txt && rm file.txt && rm pre-domains.txt && rm subdomains.txt && rm assetfinder.txt && rm brutedomain.txt
+    rm brute.txt
+    rm clear-brutedomain.txt
 }
 
 VALID_ARGUMENTS=${#}
