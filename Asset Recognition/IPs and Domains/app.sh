@@ -127,7 +127,8 @@ allScan(){
     while IFS= read -r line; do
         echo "Subdomain Brute Force: $line"
         cd /home/kali/Documents/subscan && python3 subscan.py -f sub.txt $line > /home/kali/Documents/RedTeamTools/Asset\ Recognition/IPs\ and\ Domains/brutedomain.txt
-        cat brutedomain.txt | sort | uniq > $line-SubDomains.txt
+        cd /home/kali/Documents/RedTeamTools/Asset\ Recognition/IPs\ and\ Domains/
+        cat brutedomain.txt | sort | uniq > $line.txt
     done < assetfinder-final.txt
     
     #remove all the files created
