@@ -135,13 +135,11 @@ allScan(){
     cat clear-brutedomain.txt | sort | uniq > clear-brutedomain-final.txt
     #################################################
     #################################################
-
     
     ##### NEED TO SWITCHS THIS FIELDS TO UR OWN ROUTE #####
     SUBSCAN_DIRECTORY=/home/kali/Documents/subscan/
     FILE_DIRECTORY=/home/kali/Documents/RedTeamTools/Asset\ Recognition/IPs\ and\ Domains
     ##### NEED TO SWITCHS THIS FIELDS TO UR OWN ROUTE #####
-
 
     #NEW BRUTE FORCE MODULE
     while IFS= read -r line; do
