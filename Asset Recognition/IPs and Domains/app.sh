@@ -9,11 +9,10 @@ usage() {
     echo "-d --> TLDs: "
     echo "       ------> SONAR"
     echo "       ------> ASSETFINDER"
-    echo "       ------> SUBSCAN { BRUTE FORCE }"
     echo "-A --> ALL { GO FOR A COFFEE }: "
     echo "       ------> SONAR"
     echo "       ------> ASSETFINDER"
-    echo "       ------> SUBSCAN { BRUTE FORCE }"
+    echo "       ------> SUBSCAN { BRUTE FORCE } ---- YOU WILL NEED TO SPECIFY YOUR OWN ROUTES DIRECTORY" 
     echo "---------------> Example: $0 -u http://www.example.com"
 }
 
@@ -117,7 +116,7 @@ allScan(){
         cat assetfinder.txt | sort | uniq > assetfinder-final.txt
     done < tlds-final.txt
 
-    ###################
+    #################################################
     cat assetfinder-final.txt >> brute.txt
     cat subdomains-final.txt >> brute.txt
     cat brute.txt | sort | uniq > brute-final.txt
@@ -132,13 +131,18 @@ allScan(){
         fi
     done < brute-final.txt
     cat clear-brutedomain.txt | sort | uniq > clear-brutedomain-final.txt
-    ###################
+    #################################################
+
+    ##### NEED TO SWITCHS THIS FIELDS #####
+    SUBSCAN_DIRECTORY = /home/kali/Documents/subscan
+    DIRECTORY_FILE = /home/kali/Documents/RedTeamTools/Asset\ Recognition/IPs\ and\ Domains
+    ##### NEED TO SWITCHS THIS FIELDS #####
 
     #NEW BRUTE FORCE MODULE
     while IFS= read -r line; do
         echo "Subdomain Brute Force: $line"
-        cd /home/kali/Documents/subscan && python3 subscan.py -f sub.txt $line >> /home/kali/Documents/RedTeamTools/Asset\ Recognition/IPs\ and\ Domains/brutedomain.txt
-        cd /home/kali/Documents/RedTeamTools/Asset\ Recognition/IPs\ and\ Domains/
+        cd $SUBSCAN_DIRECTORY && python3 subscan.py -f sub.txt $line >> $DIRECTORY_FILE/brutedomain.txt
+        cd $DIRECTORY_FILE
         cat brutedomain.txt | sort | uniq > FINAL.txt
     done < clear-brutedomain-final.txt
     
