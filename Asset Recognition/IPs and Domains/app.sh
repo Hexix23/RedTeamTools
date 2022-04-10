@@ -183,7 +183,7 @@ while getopts :u:j:d:A:h opt; do
         ;;                
         *) # end of arguments , allways when an argument is not recognized
             printf "Invalid Option: $1.\n"
-            usage        
+            usage
         ;;
     esac
 done
